@@ -1,0 +1,20 @@
+var amitabh = new Object();
+console.log(amitabh);
+amitabh.name = "amitabh";
+amitabh.familyname = "bacchan";
+console.log(amitabh.name);
+console.log(amitabh.familyname);
+console.log(amitabh.__proto__);
+var abhishek = Object.create(amitabh);
+abhishek.name = "bunty";
+console.log(abhishek);
+console.log(abhishek.familyname);
+console.log(abhishek.__proto__);
+amitabh.__proto__.familyname = "patel";
+console.log(amitabh.__proto__);
+abhishek.__proto__.familyname = "patel";
+console.log(abhishek.__proto__);
+var aradhana = Object.create(abhishek);
+aradhana.__proto__.faimlyname = "kaderia";
+console.log(aradhana.__proto__);
+
